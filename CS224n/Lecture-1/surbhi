@@ -1,0 +1,5 @@
+In the first lecture, first it was taught about human language, meaning of word etc.
+WordNet was introduced and its problems like subjective nature, requirement of human labour were told.
+Then we got to know representation of words by one hot vectors and problems like orthogonality associated with it.
+Distributional semantics was introduced following context of a word, word vectors and word2vec algorithm.
+Various terms like likelihood, objective function, prediction function, softmax distribution were told with their formulae.
