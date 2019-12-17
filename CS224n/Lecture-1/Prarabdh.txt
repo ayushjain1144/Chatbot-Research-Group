@@ -1,0 +1,9 @@
+The lecture begins with the introduction of importance of natural language for humans.
+It then introduces us to the idea of meaning, wordnet and denotational semantics.
+This is followed by the limitations of denotational semantics, and we are introduced to distrbutional
+semantics and word vectors.
+Then it talks about the word2vec algorithm, along with formulas for likelihood and objective functions.
+Softmax functions and distrbutions were also tallked about
+
+Doubts:
+1. I am not exactly what does theta represent in the formulas for likelihood and objective functions
