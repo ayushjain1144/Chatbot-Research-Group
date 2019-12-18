@@ -16,6 +16,8 @@ Word vector/word embeddings/word representation - distributed (continuous vector
 Word2Vec - learning algorithm for word vectors.
 I learnt about Likelihood estimate and the optimisation for word vectors.
 
+Got to know about Gensim and GloVe.
+
 Note:-
 u represents the vector of a word in a vocabulary.
 v represents the vector for the context for a word in the entirety of contexts possible.
