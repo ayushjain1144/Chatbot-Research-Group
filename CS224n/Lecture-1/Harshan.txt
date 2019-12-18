@@ -1,0 +1,17 @@
+I learnt about language and meaning, in the context of computing and artificial intelligence. 
+However, language computation is difficult because of ever-expanding vocabulary.
+Meanings of certain words depend upon the context of use.
+
+WordNet in NLTK library provides a database of most words in English language and their meanings.
+However, it still lacks the nuances of language and knowledge of the semantic relationships between words.
+
+One-Hot encoding can be used. It marks the word in an array of 0s and 1s, where only one element is 1 and rest all is 0.
+It has this property of orthogonality because of this reason.
+So, words cannot have the measure of similarity and number of dimensions will be huge.
+
+Distributed semantics - the meaning of a word in a context depends upon the words accompanying it.
+
+Word vector/word embeddings/word representation - distributed (continuous vectors).
+
+Word2Vec - learning algorithm for word vectors.
+I learnt about Likelihood estimate and the optimisation for word vectors.
