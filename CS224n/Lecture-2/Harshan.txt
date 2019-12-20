@@ -1,0 +1,34 @@
+Skip-gram and Continuous Bag of Words (CBoW) models - two types of models for word2vec.
+
+Negative sampling - sample a set of words to be classified as low probability, outside of context window.
+This is because naive softmax is expensive to compute.
+The probability distribution for negative sampling is raised to power of 3/4 to make less frequent words appear more while sampling.
+
+Cost function of Skip-gram with negative sampling was discussed.
+
+Tricks used to improve performance:-
+* Log-scale generally helps in information retrieval.
+* Max(x, t). Example, the values greater than a threshold are capped to the threshold.
+* Differential counting - words closer to center word is given more importance (in a sense, 'more counting').
+
+Note:- Major DL packages use Row Major representations for storing word vectors (N*D vectors , i.e N rows and D columns).
+
+Count based model and direct prediction models have their each pros and cons.
+A trade-off between the two is achieved by using co-occurrence probability.
+So, the dot-product between center word and context word vectors are forced to represent log(P(i|j)).
+=> w_i . w_j = log(P(i|j))
+So, vector subtractions intuitively mean co-occurrence probability.
+=> w_x . (w_a - w_b) = log(P(x|a)/P(x|b))
+Its cost function was introduced with bias terms (basically squared mean error).
+This is GloVe (Global Vectors for Word Representations).
+
+Intrinsic and Extrinsic evaluations were discussed.
+Intrinsic is like testing a particular pipeline in the system for performance.
+Extrinsic is like black-box testing.
+
+Note:-
+Since word vectors are sparse, we can separate individual components from a superposition of different clusters of same word.
+Example, pike can have different meanings.
+So, pike_1, pike_2, etc. are different individual components if a single vector for 'pike' is used.
+This single vector will be superpositioned (weighted average).
+=> u(pike) = a1*u(pike_1) + a2*u(pike_2) + ... + an*u(pike_n) , a_i = f_i/Σf_j for all j, where f_i is frequency of occurrence.
