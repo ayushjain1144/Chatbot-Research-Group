@@ -1,0 +1,19 @@
+The video started with thorough explanation of king, man, woman example.
+Then more examples pf anologies were shown.
+PCA scatterplot drawing was explained.
+Final understanding of word2vec was given with side note of unintuitive 2d model and need of high dot product with common words like of, and.
+Optimization i.e. gradient descent was started. It minimises J(cost function) by taking small step in direction of negative gradient for current theta, updating equation, repeating.
+Its problem is time and expense.
+Thus a solution was found which is known as sgd(stochastic gradient descent). It is fast and less noisy.
+2 vectors are needed for centre and outside for easy math.
+Thus 2 models introduced are cbow(Common Bag Of Words) and sg(Skip Gram).
+We got to know various new terms like sigmoid function, ceiling function and unigram distribution.
+Problem of simple co-occurence matrix is high dimensions, sparsity issues. less robust models, increased size, thus requirement of more storage.
+Its solution is usage of low dimensional vectors.
+Hacks to x is used for scaling counts in cell.
+Glove model was started.
+Differences between count based and direct prediction were told.
+Evaluation of word vectors was done by 2 methods- intrinsic and extrinsic.
+Dimension is directly proportional to performance.
+Correlation evaluation was done.
+Word senses  were told for words with many meanings.
