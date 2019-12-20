@@ -32,3 +32,9 @@ Example, pike can have different meanings.
 So, pike_1, pike_2, etc. are different individual components if a single vector for 'pike' is used.
 This single vector will be superpositioned (weighted average).
 => u(pike) = a1*u(pike_1) + a2*u(pike_2) + ... + an*u(pike_n) , a_i = f_i/Σf_j for all j, where f_i is frequency of occurrence.
+
+Note:-
+* Window size of 8 is good.
+* Wikipedia is better than news sources, because news sources do not intend on linking different pieces of information.
+* Symmetric context (both side window) is better than asymmetric context (window only on left).
+* 300 is resonably good for dimension size of word vectors. But, dimension size can be artibarity large (won't affect model capacity).
