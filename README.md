@@ -1,5 +1,10 @@
 # Chatbot-Research-Group
 
+## Chatbot Literature survey material
+
+- Papers and notes repo: https://github.com/ricsinaruto/Seq2seqChatbots/wiki/Chatbot-and-Related-Research-Paper-Notes-with-Images
+- Thesis: https://github.com/jiweil/Jiwei-Thesis/blob/master/thesis.pdf
+
 ## CS224n
 
 - Course Website: http://web.stanford.edu/class/cs224n/
