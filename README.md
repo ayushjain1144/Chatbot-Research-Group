@@ -23,3 +23,4 @@
 - https://mlexplained.com/2018/04/29/paper-dissected-glove-global-vectors-for-word-representation-explained/
 - http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes02-wordvecs2.pdf
 - www.claudiobellei.com/2018/01/06/backprop-word2vec/
+- Negative Sampling(Prof. Ng): https://www.youtube.com/watch?v=TaZz_K2xJy8
