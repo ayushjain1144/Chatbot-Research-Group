@@ -1,0 +1,22 @@
+Classification setup- inputs(x) with dimension d, labels(y), training dataset, samples
+Finding classifier i.e division boundary between 2 classes.
+Linear classifier- softmax/logistic regression
+For each training example(x,y), our objective is to maximize probability of correct class or minimize cross entropy loss( negative log probability of that class, -log p(y|x).
+Detatils of cross emtropy
+Need of neural network classifiers( non linear decision boundaries) for complex probems.
+Neuraon structure and function.
+Artificial neuron( sort of binary logistic regression units).
+Neural network- running several logistic regressions at the same time.
+We need multilayer neural networks.
+Matrix notation for a layer.
+Significance of activation function(f).
+NER(Named entity recognition)- to find and classify names in text, ambiguous and depends on context.
+BIO encoding
+Softmax window classification
+Binary true window classification
+Corrupt windows- not having named entity location in their centre- many in number, thus easy to find.
+SGD use
+Matrix calculus introduction- chain rule, useful jacobians
+Output shapes of gradient of score wrt all variables.
+Backpropagation
+Local error signal or delta
