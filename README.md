@@ -23,4 +23,12 @@
 - https://mlexplained.com/2018/04/29/paper-dissected-glove-global-vectors-for-word-representation-explained/
 - http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes02-wordvecs2.pdf
 - www.claudiobellei.com/2018/01/06/backprop-word2vec/
-- Negative Sampling(Prof. Ng): https://www.youtube.com/watch?v=TaZz_K2xJy8
+- Negative Sampling(Prof. Ng): https://www.youtube.com/watch?v=TaZz_K2xJy8'
+
+### Lecture 3 and 4
+
+- http://web.stanford.edu/class/cs224n/readings/gradient-notes.pdf
+- http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes03-neuralnets.pdf
+- https://www.youtube.com/watch?v=Ilg3gGewQ5U
+- https://www.youtube.com/watch?v=u2OeYrlAx_A&list=PLQ0sVbIj3URf94DQtGPJV629ctn2c1zN-&index=6&t=0s
+
