@@ -1,1 +1,31 @@
+Softmax Classifier - basically OneVsAll logistic regression but use softmax function instead of sigmoid
+One more difference is that even for 2 classes case, we use two OneVsAll logistic regression-like case.
+Whereas, binary logistic regression uses only 1 weight vector (i.e, sigmoid(Wx) is for one class, 1-sigmoid(Wx) is for the other).
+So, in this softmax classifier, we try to minimise loss function (L), which is
+=> L = -log(P(y|x)), where P(y|x) = exp(W_y * x)/Σexp(W_c * x), Σ is for each class from 1...m
+This loss is called Negative Log Likelihood(NLL) loss.
 
+In practice, Cross-Entropy Loss is used more often.
+'p' is the underlying distribution.
+'q' is the computed model distribution.
+Following is the loss for one particular training example.
+=> L = -Σp(c)log(q(c)), Σ is for each class c from 1...m
+In our case, only one of the p_c is 1, rest all are 0s (because One-Hot Encoding)
+So, the only term left is the loss term for the true class (i.e, -log(exp(W_y * x)/Σexp(W_c * x)) )
+So, the total loss function is,
+=> J(Θ) = (1/N)*Σ(L), Σ is for each datapoint in dataset from 1...N
+
+See: https://en.wikipedia.org/wiki/Entropy_(information_theory)#Introduction
+
+However, the classical models like SVM, linear/logistic regressions, softmax classsifiers are all linear classifiers.
+They just make a hyperplane in a D-dimensional space to linearly classify.
+
+Named Entity Recognition (NEM) is a considerably hard problem in NLP because of ambiguity.
+E.g: Future School of Ford Smith.
+Even to humans, we find to ambiguous to decide if 'Future' is part of the following named entity.
+To solve this, we simply use a Neural Network which accepts word vectors of words in a window like in Co-occurrence matrix case.
+The reason neighbouring words are also used is for context and positioning information.
+
+We could have averaged the word vectors in the window and sent that to the NN.
+Since the word vectors are sparse, we could have decomposed the averaged vector to its components.
+However, it doesn't work too well because we won't get positional information then (important).
