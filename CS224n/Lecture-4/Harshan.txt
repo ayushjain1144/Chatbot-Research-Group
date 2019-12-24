@@ -1,0 +1,26 @@
+Matrix differentiation
+Back-propagation
+
+Note:- DL libraries do auto-differentiation, i.e, they create hooks which automatically call the child node after parent.
+
+Activation:-
+* Sigmoid (not much used now)
+* Tanh
+* Hard tanh
+* ReLU (most popular now)
+* Leaky ReLU (variation to ReLU)
+etc.
+
+Initialization:-
+* Xavier initialization: var = 1/(fan_in + fan_out)
+Xavier is good for sigmoid.
+* He initialization: var = 2/(fan_in + fan_out)
+He is good for ReLU.
+
+Optimization:-
+* SGD (simplest, but requires many manual tricks/techniques to make it very efficient)
+* Momentum
+* Nestorov
+* AdaGrad
+* Adam (most effective, but slightly expensive to compute)
+etc.
