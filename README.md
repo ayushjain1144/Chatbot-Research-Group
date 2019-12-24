@@ -1,5 +1,9 @@
 # Chatbot-Research-Group
 
+## Notes
+
+- Google Doc: https://docs.google.com/document/d/1GbYHpv2hEhePz5vDV3sN2EUwCFeR_jb_JFkrTAw06Nw/edit?usp=sharing
+
 ## Chatbot Literature survey material
 
 - Papers and notes repo: https://github.com/ricsinaruto/Seq2seqChatbots/wiki/Chatbot-and-Related-Research-Paper-Notes-with-Images
