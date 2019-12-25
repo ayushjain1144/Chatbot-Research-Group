@@ -1,0 +1,18 @@
+AutoML
+Matrix gradients for our simple neural net and some
+Upstream local downstream gradients
+Gradients sum at outward branches
+Node intuitions
+Computation graphs and backpropagation
+Incorrect and correct ways of doing backp
+Automatic differentiation
+Implementation technique of backprop
+Forward backward api
+Gradient checking
+Karpathy article
+Regularisation to prevent overfitting
+Vectorisation
+Non linearities
+Optimisers
+Initialisation
+Learning rates
