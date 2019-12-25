@@ -8,6 +8,8 @@
 
 - Papers and notes repo: https://github.com/ricsinaruto/Seq2seqChatbots/wiki/Chatbot-and-Related-Research-Paper-Notes-with-Images
 - Thesis: https://github.com/jiweil/Jiwei-Thesis/blob/master/thesis.pdf
+- Introduction: http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/
+- Article with Implementation hints: https://hackernoon.com/deep-learning-chatbot-everything-you-need-to-know-r11jm30bc
 
 ## CS224n
 
