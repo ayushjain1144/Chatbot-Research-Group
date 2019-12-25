@@ -36,3 +36,9 @@
 - https://www.youtube.com/watch?v=Ilg3gGewQ5U
 - https://www.youtube.com/watch?v=u2OeYrlAx_A&list=PLQ0sVbIj3URf94DQtGPJV629ctn2c1zN-&index=6&t=0s
 
+### Lecture 5
+
+- Notes: http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes04-dependencyparsing.pdf
+- Dependency parser paper: https://nlp.stanford.edu/pubs/emnlp2014-depparser.pdf
+- POS Embedding Generation: https://datascience.stackexchange.com/questions/16379/word-embedding-word2vec-for-pos-tagging
+
