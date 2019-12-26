@@ -44,3 +44,8 @@
 - Dependency parser paper: https://nlp.stanford.edu/pubs/emnlp2014-depparser.pdf
 - POS Embedding Generation: https://datascience.stackexchange.com/questions/16379/word-embedding-word2vec-for-pos-tagging
 
+### Lecture 6 and 7
+
+- Notes: http://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes05-LM_RNN.pdf
+- http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
