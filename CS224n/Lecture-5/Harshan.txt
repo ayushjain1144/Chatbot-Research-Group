@@ -1,0 +1,52 @@
+Syntactic structures:-
+We group together words in 'Phase structures'.
+
+Example: 
+(Noun Phrase) := (Determiners) & (Noun) & (Prepositional Phrase)
+(Prepositional Phrase) := (Preposition) & (Noun Phrase)
+
+Dependency Structure:-
+In a sentence, a prepositional phrase (PP) has to modify a noun or noun phrase.
+In this case, we say that the noun phrase has a dependency of that prepositional phrase.
+
+Prepositional Phrase Attachment Ambiguity:-
+Example: Scientists count whales from space.
+'from space' is prepositional phrase which maybe interpreted as modifying either 'whales' or 'count'.
+If there are multiple PP in a sentence, each PP can modify any of the nouns mentioned before it (including nouns in prev. PP).
+Example:
+The board approved its acquisition [by Royal Trustco Ltd.] [of Toronto] [for $27 a share] [at its monthly meeting].
+This exponential order growth of PP attachment combinations to given by Catalan numbers. => C_n = (2n)!/[(n+1)!n!]
+
+Coordination Scope Ambiguity:-
+Example: Shuttle veteran and long-time NASA executive Fred Gregory appointed to board.
+Here, 'long-time NASA executive' is associated to 'Fred Gregory'.
+But there is an ambiguity whether 'shuttle veteran' is a separate person or is associated to 'Fred Gregory'.
+
+Similarly, look up 'Ajectival Modifier Ambiguity' and 'Verb Phase (VP) Attachment Ambiguity'.
+
+Dependency Grammar and Dependency Structures:-
+A tree-like structure showing dependency between words in a sentence is made.
+
+Dependency Parsing:-
+Rules:
+* Only one word dependent of ROOT.
+* No cyclic dependencies, i.e, {A -> B,  B-> C, C -> A} is invalid.
+These two rules make the dependency parse a tree.
+One issue is whether dependencies can cross each other.
+If they can cross, then it is 'Non-projective'.
+If they cannot, then it is 'Projective'.
+
+Transition-based Parsing:-
+
+Basically, a bottom-up parser with Stack and Buffer is used and dependencies are based on 3 rules:
+* Shift
+* Arc-left
+* Arc-right
+The Arcs are the controls which create the dependency based on the language rules.
+
+In traditional ML based parser, computing the features representations of words in Stack and Buffer is expensive.
+So, a neural network based solution was proposed, which can learn the feature representations as well.
+
+Some examples of parsers:
+* MaltParser
+* Neural Dependency Parser
