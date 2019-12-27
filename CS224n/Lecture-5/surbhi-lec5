@@ -1,0 +1,18 @@
+Phrase structure
+Rules
+Context free grammars
+Possible ambiguities
+Human vs programming language
+Catalan numbers
+Dependencies
+Treebanks - Definition, uses(ml)
+Dependency parsing rules, meaning, methods
+Projective, non projective parse
+Transition based shift reduce parser
+Stack, buffer
+Left/right arc
+Maltparser
+Evaluating dependency parser
+Need  of neural dependency parser- faster, lesser issues
+Extracting tokens
+Distributed representations
