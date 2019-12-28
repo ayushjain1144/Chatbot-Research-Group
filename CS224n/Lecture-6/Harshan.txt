@@ -1,0 +1,49 @@
+NLP Task:- Language Modelling
+
+Traditional methods:-
+n-gram models:
+Basically, we look back n words from the word we are trying to predict given an incomplete sentence.
+Then, the probability distribution for the entire vocabulary is given by,
+=> P(x|"<prev n words>") = P("<prev n words>"+x)/("<prev n words>")
+
+Two problems:
+* Numerator sparsity
+  When P("<prev n words>"+x) never occurred in training data, it is given probability 0.
+  However, it might be possible to occur. To solve this, we can give a small delta probability to each word in vocab.
+  This is called 'smoothing'.
+* Denomiator sparsity
+  When the model has seen a case "<prev n words>" at all, then we fall back to "<prev n-1 words>" model as a failure fallback.
+  Basically, switch from n-gram to (n-1)-gram model.
+* As the n in n-gram increases, above sparsities also increase in number and the model size also increases.
+
+
+Modern methods:-
+Neural language models:
+
+Fixed-window neural language model:
+Concatenate words in the window (basically last n words) and pass it in a model similar to Named Entity Recog (NER).
+The output of this model will be a probability distribution over all the words in vocabulary.
+
+Problems:
+* The fixed window size can never be large enough for a sentence (it is fixed).
+* The weight vector multiplied with the concatenated word embedding of the input is segmented.
+  This means that the first (1/n)th portion of the weight vector is multiplied only with first embedding, and so on.
+  So, no weight sharing is happening.
+ 
+ Recurrent Neural Network:
+ We unroll the words (i.e, word embeddings) (x) in the given input by mutating a hidden state (h) which is computed by,
+ => h_t = A(W_h * h_(t-1) + W_x * x_t + b), where A is any activation function like sigmoid.
+ Finally, we get probability distribution over the vocabulary by,
+ => y = softmax(U * h_n), where U is chosen such that resulting dimension size of y is a vector of length of vocab size.
+ 
+ This fixes the fixed-window model's disadvantages but the new problems are:
+ * Expensive to compute. To compute nth state, (n-1)th state is necessary. So, the model cannot be computed parallely.
+ * Though we expect arbitarily old info to be retained, in practice they are not much useful.
+ 
+ The loss function is similar to previous lectures. Just a cross-entropy loss between the actual y and guesses y.
+ Actual y is in one-hot encoded form. Guessed y is the resulting softmax layer which represents prob over the vocab.
+ 
+ Evaluation metric:-
+ perplexity = ∏(1/P(x_(t+1)|x_t,...,x_1))^(1/T), where ∏ runs from 1 to T
+ We can see that by rearrangement, perplexity is basically exp(J(θ)), where J(θ) is the loss function for the RNN.
+ We want to perplexity to be closer to 1. 
