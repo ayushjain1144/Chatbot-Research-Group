@@ -1,0 +1,14 @@
+Language modelling- definition
+N-gram language model
+Conditional probability
+Problems with n gram- sparsity (more with large n i.e >5)(solution- additional delta i.e. smoothing), not much context, no data for last n-1 words (solution- back-off), storage
+Fixed window neural language model- advantages, disadvantages
+RNNs- recurrent neural networks- features, advantages, disadvantages
+Hidden states
+Unrolling
+Training RNN-LM
+Backpropagation through time
+Text generation
+Perplexity (lower-better)
+Sentence classification
+Encoder module
