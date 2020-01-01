@@ -1,0 +1,47 @@
+Vanilla RNNs problems:-
+
+Vanishing and exploding gradients:
+=> d(J_i)/d(h_j) = d(J_i)/d(h_i) * W_h^(j-i) * diag(d(sigmoid(...))/d(...))
+As we can see, the derivative is a factor of the weight matrix raised to the power of time steps.
+So, whatever value the derivative takes in the end will be amplified when it reaches beginning.
+This causes not very good dependency between old information with new hidden states.
+Also, this causes a problem of us not knowing if the issue is independency or the model learning something very different.
+
+Fancy RNNs:-
+
+LSTM:
+Instead of just a hidden state, there is now a hidden state and a cell state.
+Input, Forget and Output gates are computed very similar to vanilla RNN hidden state computation.
+We use these gates to compute the cell state, taking previous timestep cell step as an argument.
+Hidden state (regarded as output from cell state) is computed by multiplying a function of cell state with output gate.
+The logic is that the cell state is seen as a shortcut for gradients to travel without vanishing or exploding the hidden state.
+
+GRU:
+No cell states, just hidden states. Still gates are used, namely Update gate and Reset gate.
+Update gate controls how much of new hidden state should be used, and how much of old hidden state to carry forward.
+Reset gate controls how much of previous timestep hidden state should be used to compute new hidden state.
+
+GRU is faster because it has fewer parameters.
+But, LSTM is good default choice because it has more parameters, so cannot go wrong with more parameters.
+Use GRU if we need something more efficient.
+
+NOTE:- Look up the LSTM and GRU equations from a better source.
+
+Modifications:-
+
+Bi-directional RNNs:
+Basically, a RNN which runs forward through a sentence and a separate RNN which backwards through the sentence from last word.
+The hidden states from both RNNs are simply concatenated.
+This is generally used for sentiment analysis, where contexts from both sides of a word are required.
+Sometimes, both the RNNs can have shared weights. Mostly, both the RNNs are trained simultaneously.
+
+Multi-layer RNNs (Stacked RNNs):
+The hidden state which is computed in vanilla RNN is used as input (x) for another RNN for the same timestep.
+Stacked RNNs are used to learn complex representations.
+Vanilla RNNs might be learning syntax, whereas stacked RNNs might be learning semantics.
+See picture of stacked RNN to understand it easily.
+
+NOTE:
+* 2-4 layers are considered best for encoder RNNs.
+* 4 layers are considered best for decoder RNNs.
+* Transformer-based networks can be stacked upto 24 layers or more (because they have skip-connections).
