@@ -1,0 +1,19 @@
+Vanishing gradient problem-  meaning, proof, why this is a problem, it's effect on RNN-LM, fixes(lstm, skip connection/Resnet), can be a problem for all neural architectures ex- ResNet
+Identity connection
+Dense connection/DenseNet
+Highway connection/HighwayNet
+Exploring gradient problem- meaning, why this is a problem, bad updates, can result in inf/nan, solution (gradient clipping)
+Lstm
+3 gates- forget, input, output
+Sigmoid function
+New cell content
+Cell state
+Hidden state
+Equations
+ gru( simpler lstm)
+2 gates- update, reset
+New hidden state content, hidden state
+Equations
+Lstm vs gru
+Bidirectional rnn- for sentiment classification, equations, uses, BERT
+Multilayer rnn- meaning, use, working
