@@ -1,0 +1,27 @@
+Machine translation(MT)- Translating sentence x(source language) to sentence y(target language).
+Began in 1950s with russian to english during cold war. Systems were mostly rule based i.e. used bilingual dictionary.
+SMT(Statistical MT)- 1990s to 2010s
+Used probabalisic model i.e. argmaxyP(y|x) = argmaxyP(x|y).P(y)
+P(x|y)- translation model, parallel data(same data written in different languages, earliest example is rosetta stone)
+P(y)- language model, monolingual data(data in 1 language)
+a- alignment- how words correspond to each other in different languages
+can be one-to-many,many-to-one,many-to-many.
+Fertile word- word of source lang that has many meanings in target lang.
+Decoding- finding argmaxy
+SMT required lot of human effort and was complex.
+NMT(neural MT)- 2014
+MT using single neural network
+Called seq2seq(sequence to sequence), has 2 RNNs(encoder and decoder)
+Encoder converts source sentence to an encoding.
+Final hidden state of encoder RNN = Initial hidden state of decoder RNN
+Decoder computes negative log probability.
+Seq2seq is also used in summarization, dialogue, parsing, code generation.
+Greedy decoding- takes most probable word in each step, no going back.
+Exhaustive search decoding- tracking possible partial translations at each step, expensive, guaranteed to find optimal solution but is infeasible.
+Beam search decoding- tracking k most probable partial translations at each step(k- beam size i.e. 5-10)
+Decoding stopped when timestep T reached or we have atleast n complete hypotheses(T,n predefined).
+Biased towards shorter translations. Therefore, normalize by length.
+BLEU evaluates MT. Compares machine and human written translations.
+Attention- solution to problems like bottleneck, vanishing gradient.
+Outputs info from hidden states that received high attention.
+Its variants are dot product, multiplicative, additive.
