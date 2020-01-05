@@ -1,0 +1,28 @@
+Statistical Machine Translation (SMT):-
+Finding best sentence y in a language given sentence x in another language.
+=> argmax(P(y|x)) = argmax(P(x|y)P(y)), because P(x)=1.
+We need large corpus of parallel texts.
+Learning Language Alignment is hard.
+Alignment is relationship between corresponding words in two languages.
+It is very complex and require lot of human expertise.
+
+Neural Machine Translation (NMT):-
+* Seq2seq model
+It has an encoder RNN and a decoder RNN.
+The sentence is feeded into the encoder RNN and it generates an encoded hidden state at the <END> token.
+This encoded hidden state is used as the initial state of the decoder RNN.
+The output of each timestep in decoder RNN is used as input to the next timestep, until <END> token is generated.
+The outputs of the decoder RNN is the probability distribution over the vocabulary.
+
+Seq2seq is a conditional language model.
+It is language model because it generates the probability of next word of target sentence y, but it is also conditioned on x.
+=> P(y|x) = P(y1|x)P(y2|y1,x)P(y3|y2,y1,x)...P(yn|y_(n-1),...,y1,x)
+
+Since we are only using the argmax in the output, it is a greedy approach.
+However, exaustive search has exponential time complexity.
+So, Beam Search is used, where the top-most k possible paths are computed.
+Scoring method is to take the sum of log probabilities of each word prediction given the previous words.
+The sum of log probabilities of the completed hypotheses is finally normalized by the length of the sentence, to prevent bias towards shorter sentences.
+Higher scores => better.
+
+//TODO
