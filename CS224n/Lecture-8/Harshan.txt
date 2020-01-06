@@ -25,4 +25,30 @@ Scoring method is to take the sum of log probabilities of each word prediction g
 The sum of log probabilities of the completed hypotheses is finally normalized by the length of the sentence, to prevent bias towards shorter sentences.
 Higher scores => better.
 
-//TODO
+BiLingual Evaluation Understudy (BLEU) is the evaluation metric for Machine Translation (MT).
+BLEU compares machine-generated translation with the human-written translation and computes a similarity score based on:
+* n-gram precision (usually 1,2,3,4-grams) (basically checks if a n-gram from machine appears atleast once in human translation)
+* Brevity penalty (prevents too short sentences, which might contain only keywords and still score well in n-gram precision)
+However, BLEU is imperfect because a sentence can have more than 1 translation. But if it doesn't have n-gram overlap, then it scores low.
+
+Attention:-
+The hidden state of 'a timestep' in decoder RNN is dotted with the encoder hidden states and softmax is applied over the dot-products.
+We compute the attention output which weighted mean of the encoder hidden states with the weights being the attention distribution.
+This attention score is concatenated with that timestep's decoder hidden state and is used to compute next word.
+Sometimes, attention output from previous timestep is concatenated with the usual decoder output from previous timestep.
+Sometimes, this concatenated value is then used as input to next decoder timestep.
+
+Attention automatically learns a soft 'alignment' without explicitly being trained for it (unsupervised learning).
+Attention solves bottleneck problem, helps with vanishing gradient problem and provides some interpretability.
+
+Attention scores variants:-
+Let query be s and hidden states be [h1, h2, ..., h_n]. s' means 's transposed'.
+* Basic dot-product attention: (seen above)
+  => e_i = s' . h_i
+* Multiplicative attention:
+  => e_i = s' x W x h_i
+  W is learnable parameter.
+* Additive attention:
+  => e_i = v' x tanh(W1 x h_i + W2 x s), where v is a vector of length d
+  W1, W2 and v are learnable parameters.
+  The dimension size (length) of v, which is d is a hyperparameter.
