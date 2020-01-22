@@ -1,5 +1,7 @@
 # Chatbot-Research-Group
 
+Add links to relevant research papers in the file: Research Papers
+
 ## Notes
 
 - Google Doc: https://docs.google.com/document/d/1GbYHpv2hEhePz5vDV3sN2EUwCFeR_jb_JFkrTAw06Nw/edit?usp=sharing
