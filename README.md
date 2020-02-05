@@ -21,6 +21,7 @@ Add links to relevant research papers in the file: Research Papers
 ### Lecture 1
 
 - http://web.stanford.edu/class/cs234/CS234Win2019/slides/lnotes_intro.pdf (Note: follow 2019 website for notes)
+- https://www.youtube.com/watch?v=JgvyzIkgxF0: General Overview of RL
 
 ## CS224n
 
