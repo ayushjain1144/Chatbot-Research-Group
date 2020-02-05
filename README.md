@@ -13,7 +13,7 @@ Add links to relevant research papers in the file: Research Papers
 - Introduction: http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/
 - Article with Implementation hints: https://hackernoon.com/deep-learning-chatbot-everything-you-need-to-know-r11jm30bc
 
-## CS231n
+## CS234n
 
 - Course Website: http://web.stanford.edu/class/cs234/index.html
 - YouTube: https://www.youtube.com/playlist?list=PLoROMvodv4rOSOPzutgyCTapiGlY2Nd8u
